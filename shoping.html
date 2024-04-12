@@ -60,6 +60,7 @@
         }
 
         header {
+            background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -75,7 +76,7 @@
             padding: 20px;
         }
 
-    .product-image {
+        .product-image {
     margin-bottom: 20px;
     text-align: center;
     display: flex;
@@ -108,7 +109,7 @@
 
 .color-options {
     text-align: center;
-    margin: 20px 0 0 10px;
+    margin: 10px 0 0 10px;
 }
 
 .color-option {
@@ -203,7 +204,7 @@
 
         .additional-benefits h2 {
             font-size: 24px;
-            margin-bottom:20px;
+            margin: 20px 0 20px 0;
             color: #333;
             text-align: center;
         }
@@ -395,19 +396,13 @@
                 <div class="product-image">
                     <img id="main-image" src="package_images/fanswitch1.jpg" alt="Smart Home Image">
                 </div>
-                </div>
                 
                 <div class="package-info">
                     <h1>FAN SWITCH</h1>
                     <p>Enhance your living experience with our Smart Home Suite. Effortlessly manage your home from anywhere with just a tap on your smartphone.</p>
                 </div>
-            
-                <div class="price-info">
-                    <p>Rs 25,590.00</p>
-                    <a href="#" class="btn r-04 btn--theme hover--tra-black last-link">BUY NOW</a>
-                </div>
 
-                <div class="color-options">
+            <div class="color-options">
                     <h2>Available Colors</h2>
                     <div class="color-option" onclick="changeImage('package_images/fanswitch1.jpg')">
                         <img src="package_images/fanswitch1.jpg" alt="Black"> white
@@ -416,12 +411,17 @@
                         <img src="package_images/fanswitch2.jpg" alt="White"> Black
                     </div>
                     <!-- Add more color options as needed -->
-
-                    <script>
-                        function changeImage(imagePath) {
-                            document.getElementById('main-image').src = imagePath;
-                        }
-                    </script>
+                </div>
+            
+            <script>
+                function changeImage(imagePath) {
+                    document.getElementById('main-image').src = imagePath;
+                }
+            </script>
+                <div class="price-info">
+                    <p>Rs 25,590.00</p>
+                    <a href="#" class="btn r-04 btn--theme hover--tra-black last-link">BUY NOW</a>
+                </div>
                 <div class="additional-benefits">
                     <h2>Additional Package Benefits</h2>
                     <ul>
