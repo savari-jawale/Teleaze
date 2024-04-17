@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Suite</title>
+    <link rel="shortcut icon" href="images/favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" href="images/apple-touch-icon.png" type="image/x-icon">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    
+    <!-- BOOTSTRAP CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+            
+    <!-- FONT ICONS -->
+    <link href="css/flaticon.css" rel="stylesheet">
+
+    <!-- PLUGINS STYLESHEET -->
+    <link href="css/menu.css" rel="stylesheet">	
+    <link id="effect" href="css/dropdown-effects/fade-down.css" media="all" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">	
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/lunar.css" rel="stylesheet">
+
+    <!-- ON SCROLL ANIMATION -->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- TEMPLATE CSS -->
+    <!-- <link href="css/blue-theme.css" rel="stylesheet"> -->
+    <!-- <link href="css/crocus-theme.css" rel="stylesheet"> -->
+     <link href="css/green-theme.css" rel="stylesheet">
+    <!--<link href="css/magenta-theme.css" rel="stylesheet">-->
+    <!-- <link href="css/pink-theme.css" rel="stylesheet"> -->
+    <!-- <link href="css/purple-theme.css" rel="stylesheet"> -->
+    <!-- <link href="css/skyblue-theme.css" rel="stylesheet"> -->
+    <!-- <link href="css/red-theme.css" rel="stylesheet"> -->
+    <!-- <link href="css/violet-theme.css" rel="stylesheet"> -->	
+    
+    <!-- RESPONSIVE CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+
+
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        
+
+        .container1 {
+            max-width: 800px;
+            margin: 60px auto 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .product-image {
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .product-image {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+        .product-image img {
+            display: flex;
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px; 
+        }
+
+        .color-options {
+    display: block;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.color-options {
+    text-align: center;
+    margin: 10px 0 0 10px;
+}
+
+.color-option {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px; 
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.color-option span {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+
+
+
+        .package-info h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+            text-align: center;
+        }
+
+        .package-info p {
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .package-includes {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .package-includes h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .includes-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .includes-item {
+            width: 200px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .includes-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .includes-item .item-description {
+            padding: 10px;
+        }
+
+        .includes-item .item-description p {
+            margin: 5px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        .additional-benefits h2 {
+            font-size: 24px;
+            margin: 20px 0 20px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        .additional-benefits ul {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .additional-benefits ul li {
+            margin-bottom: 10px;
+        }
+
+        .additional-benefits ul li a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .additional-benefits ul li a:hover {
+            color: #333;
+        }
+
+        .price-info {
+            text-align: center;
+        }
+
+        .price-info p {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+
+
+        .similar-products {
+            margin-top: 40px;
+            margin-bottom: 100px; 
+            text-align: center;
+        }
+
+        .similar-products h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .similar-products .product {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .similar-products .product img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .similar-products .product .product-info {
+            padding: 10px;
+        }
+
+        .similar-products .product .product-info h3 {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .similar-products .product .product-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+   
+		<!-- PAGE CONTENT
+		============================================= -->	
+		<div id="page" class="page font--jakarta">
+
+
+
+
+			<!-- HEADER
+			============================================= -->
+			<header id="header" class="white-menu navbar-dark white-scroll">
+				<div class="header-wrapper">
+
+
+					<!-- MOBILE HEADER -->
+				    <div class="wsmobileheader clearfix">	  	
+				    	<span class="smllogo"><a href="index.html"></a><img src="images/TELEAZE-logo.png" alt="mobile-logo"></span>
+				    	<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>	
+				 	</div>
+
+
+				 	<!-- NAVIGATION MENU -->
+				  	<div class="wsmainfull menu clearfix">
+	    				<div class="wsmainwp clearfix">
+
+
+	    					<!-- HEADER BLACK LOGO -->
+	    					<div class="desktoplogo">
+	    						<a href="index.html" class="logo-black"><img src="images/TELEAZE-logo.png" alt="logo"></a>
+	    					</div>
+
+
+	    					<!-- HEADER WHITE LOGO -->
+	    					<div class="desktoplogo">
+	    						<a href="index.html" class="logo-white"><img src="images/TELEAZE-logo.png" alt="logo"></a>
+	    					</div>
+
+
+	    					<!-- MAIN MENU -->
+	      					<nav class="wsmenu clearfix">
+	        					<ul class="wsmenu-list nav-theme">
+                                     <!-- SIMPLE NAVIGATION LINK -->
+							    	<li class="nl-simple" aria-haspopup="true"><a href="why_teleaze.html" class="h-link">Why Teleaze?</a></li>
+                        <!-- DROPDOWN SUB MENU -->
+						          	<li aria-haspopup="true"><a href="#" class="h-link">Products <span class="wsarrow"></span></a>
+	            						<ul class="sub-menu">
+	            							<li aria-haspopup="true"><a href="comfort-lightning.html">Comfort & Lighting</a></li>
+	            							<li aria-haspopup="true"><a href="security-access-control.html">Security & Access Control</a></li>
+	            							<li aria-haspopup="true"><a href="smart-appliances.html">Smart Appliance</a></li>
+	            							<li aria-haspopup="true"><a href="#lnk-3">HVAC Control</a></li>
+	            							<li aria-haspopup="true"><a href="#reviews-1">Control & Connectivity</a></li>	
+											<li aria-haspopup="true"><a href="#reviews-1">Energy Management</a></li>
+											<li aria-haspopup="true"><a href="#reviews-1">Smart Furniture</a></li>		
+						           		</ul>
+								    </li>
+                                    <!-- DROPDOWN SUB MENU -->
+						          	<li aria-haspopup="true"><a href="pricing-1.html" class="h-link">Solutions<span class="wsarrow"></span></a>
+	            						<ul class="sub-menu">
+	            							<li aria-haspopup="true"><a href="smart_primary.html">Smart Primary</a></li>
+	            							<li aria-haspopup="true"><a href="smart_pro.html">Smart Pro</a></li>
+	            							<li aria-haspopup="true"><a href="smart_advanced.html">Smart Advanced</a></li>
+	            							<li aria-haspopup="true"><a href="#lnk-3">Smart Premium</a></li>	
+						           		</ul>
+								    </li>
+									<!-- DROPDOWN SUB MENU -->
+									<li aria-haspopup="true"><a href="#" class="h-link">Patners<span class="wsarrow"></span></a>
+	            						<ul class="sub-menu">
+	            							<li aria-haspopup="true"><a href="#lnk-1">Benefits</a></li>
+	            							<li aria-haspopup="true"><a href="#lnk-2">Partner Ecosystem</a></li>
+	            							<li aria-haspopup="true"><a href="testimoinal.html">Testimonials</a></li>
+	            							<li aria-haspopup="true"><a href="contacts.html">Contact Us</a></li>	
+						           		</ul>
+								    </li>
+									<!-- DROPDOWN SUB MENU -->
+									<li aria-haspopup="true"><a href="#" class="h-link">Insights<span class="wsarrow"></span></a>
+	            						<ul class="sub-menu">
+	            							<li aria-haspopup="true"><a href="#lnk-1">Success Stories </a></li>
+	            							<li aria-haspopup="true"><a href="#lnk-2">Case Studies</a></li>
+	            							<li aria-haspopup="true"><a href="blog.html">Blogs</a></li>
+	            							<li aria-haspopup="true"><a href="faq.html">FAQs</a></li>	
+						           		</ul>
+								    </li>
+
+
+								    <!-- SIGN UP BUTTON -->
+								    <li class="nl-simple" aria-haspopup="true">
+								    	<a href="contacts.html" class="btn r-04 btn--theme hover--tra-black last-link">Contact Us</a>
+								    </li> 
+                                    <li class="nl-simple" aria-haspopup="true">
+								    	<a href="index.html" class="btn r-04 btn--theme hover--tra-black last-link">Shop</a>
+								    </li> 
+
+	        					</ul>
+	        				</nav>	<!-- END MAIN MENU -->
+
+
+	    				</div>
+	    			</div>	<!-- END NAVIGATION MENU -->
+
+
+				</div>     <!-- End header-wrapper -->
+			</header>	<!-- END HEADER -->
+
+
+            <div class="container1">
+                <div class="product-image">
+                    <img id="main-image" src="package_images/fanswitch1.jpg" alt="Smart Home Image">
+                </div>
+                
+                <div class="package-info">
+                    <h1>FAN SWITCH</h1>
+                    <p>Enhance your living experience with our Smart Home Suite. Effortlessly manage your home from anywhere with just a tap on your smartphone.</p>
+                </div>
+
+            <div class="color-options">
+                    <h2>Available Colors</h2>
+                    <div class="color-option" onclick="changeImage('package_images/fanswitch1.jpg')">
+                        <img src="package_images/fanswitch1.jpg" alt="Black"> white
+                    </div>
+                    <div class="color-option" onclick="changeImage('package_images/fanswitch2.jpg')">
+                        <img src="package_images/fanswitch2.jpg" alt="White"> Black
+                    </div>
+                    <!-- Add more color options as needed -->
+                </div>
+            
+            <script>
+                function changeImage(imagePath) {
+                    document.getElementById('main-image').src = imagePath;
+                }
+            </script>
+                <div class="price-info">
+                    <p>Rs 25,590.00</p>
+                    <a href="#" class="btn r-04 btn--theme hover--tra-black last-link">BUY NOW</a>
+                </div>
+                <div class="additional-benefits">
+                    <h2>Additional Package Benefits</h2>
+                    <ul>
+                        <li><a href="#">Gold Subscription Plan 9 months</a></li>
+                        <li><a href="#">Free Installation Support in selected cities</a></li>
+                    </ul>
+                </div>
+            </div>
+                
+            
+            
+
+    
+<!-- TEAM-1
+			============================================= -->
+			<section id="team-1" class="pt-100 team-section">
+				<div class="container">
+
+
+					<!-- SECTION TITLE -->	
+					<div class="row justify-content-center">	
+						<div class="col-md-10 col-lg-9">
+							<div class="section-title mb-80">
+
+								<!-- Title -->	
+								<h2 class="s-50 w-700">Try Something New Today</h2>	
+
+								<!-- Text -->	
+								<!--<p class="s-21 color--grey">Ligula risus auctor tempus magna feugiat lacinia.</p>-->
+
+							</div>	
+						</div>
+					</div>
+
+
+					<!-- TEAM MEMBERS WRAPPER -->	
+					<div class="team-members-wrapper">
+						<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+
+
+							<!-- TEAM MEMBER #1 -->
+							<div class="col">
+								<div class="team-member mb-50 wow fadeInUp">
+															
+									<!-- Team Member Photo -->
+									<div class="team-member-photo r-14">
+										<div class="hover-overlay"> 
+											<img class="img-fluid" src="images/switch1.png" alt="team-member-foto">
+											<div class="item-overlay"></div>
+										</div>
+									</div>
+																																					
+									<!-- Team Member Data -->		
+									<div class="team-member-data">		
+										<h6 class="s-20 w-700 color--black">Switches</h6>
+										<!--<p class="color--grey">Founder and CEO</p>-->
+									</div>	
+								
+								</div>									
+							</div>	<!-- END TEAM MEMBER #1 -->
+							
+							
+							<!-- TEAM MEMBER #2 -->
+							<div class="col">
+								<div class="team-member mb-50 wow fadeInUp">
+								
+									<!-- Team Member Photo -->
+									<div class="team-member-photo r-14">
+										<div class="hover-overlay"> 
+											<img class="img-fluid" src="images/curtainswitch2.png" alt="team-member-foto">
+											<div class="item-overlay"></div>
+										</div>
+									</div>
+												
+									<!-- Team Member Data -->		
+									<div class="team-member-data">													
+										<h6 class="s-20 w-700 color--black">Curtain Switch</h6>
+										<!--<p class="color--grey">Software Engineer</p>-->
+									</div>	
+
+								</div>											
+							</div>	<!-- END TEAM MEMBER #2 -->
+							
+							
+							<!-- TEAM MEMBER #3 -->
+							<div class="col">
+								<div class="team-member mb-50 wow fadeInUp">
+
+									<!-- Team Member Photo -->
+									<div class="team-member-photo r-14">
+										<div class="hover-overlay"> 
+											<img class="img-fluid" src="images/dimmer switch3.png" alt="team-member-foto">
+											<div class="item-overlay"></div>
+										</div>
+									</div>
+																			
+									<!-- Team Member Data -->		
+									<div class="team-member-data">													
+										<h6 class="s-20 w-700 color--black">Dimmer Switch</h6>
+										<!--<p class="color--grey">Software Engineer</p>-->
+									</div>
+
+								</div>	
+							</div>	<!-- END TEAM MEMBER #3 -->
+												
+							
+							<!-- TEAM MEMBER #4 -->
+							<div class="col">
+								<div class="team-member mb-50 wow fadeInUp">
+
+									<!-- Team Member Photo -->
+									<div class="team-member-photo r-14">
+										<div class="hover-overlay"> 
+											<img class="img-fluid" src="images/scene panel1.png" alt="team-member-foto">
+											<div class="item-overlay"></div>
+										</div>
+									</div>
+																			
+									<!-- Team Member Data -->		
+									<div class="team-member-data">													
+										<h6 class="s-20 w-700 color--black">Scene Panel</h6>
+										<!--<p class="color--grey">Web Development</p>-->
+									</div>	
+
+								</div>
+							</div>	<!-- END TEAM MEMBER #4 -->
+
+
+				</div>	    <!-- End container -->
+			</section>	<!-- END TEAM-1 -->
+
+
+        <!-- RATING-1 WRAPPER -->
+        <div class="rating-1-wrapper">
+            <div class="row justify-content-md-center row-cols-1 row-cols-md-3">
+
+
+                <!-- RATING BOX #1 -->
+                <div class="col">
+                    <div id="rb-1-1" class="rbox-1">
+
+                        <!-- Brand Logo -->
+                        <div class="rbox-1-img">
+                            <img class="img-fluid" src="images/brand-21.png" alt="feature-image">
+                        </div>
+
+                        <!-- Rating Stars -->
+                        <div class="star-rating ico-10 bg--white-100 r-100 clearfix">
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star-half-empty mr-5"></span>	
+                            &nbsp; 4.7/5
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- RATING BOX #2 -->
+                <div class="col">
+                    <div id="rb-1-2" class="rbox-1">
+
+                        <!-- Brand Logo -->
+                        <div class="rbox-1-img">
+                            <img class="img-fluid" src="images/brand-22.png" alt="feature-image">
+                        </div>
+
+                        <!-- Rating Stars -->
+                        <div class="star-rating ico-10 bg--white-100 r-100 clearfix">
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star mr-5"></span>	
+                            &nbsp; 4.95/5
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- RATING BOX #3 -->
+                <div class="col">
+                    <div id="rb-1-3" class="rbox-1">
+
+                        <!-- Brand Logo -->
+                        <div class="rbox-1-img">
+                            <img class="img-fluid" src="images/brand-23.png" alt="feature-image">
+                        </div>
+
+                        <!-- Rating Stars -->
+                        <div class="star-rating ico-10 bg--white-100 r-100 clearfix">
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star"></span>
+                            <span class="flaticon-star-1 mr-5"></span>	
+                            &nbsp; 4.24/5
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>  <!-- End row -->
+        </div>	<!-- END RATING-1 WRAPPER -->
+
+            
+    </div>	<!-- End container -->
+</div>	<!-- END RATING-1 -->
+
+    <footer id="footer-3" class="pt-100 footer">
+        <div class="container">
+
+
+            <!-- FOOTER CONTENT -->
+            <div class="row">
+
+
+                <!-- FOOTER LOGO -->
+                <div class="col-xl-3">
+                    <div class="footer-info">
+                        <img class="footer-logo" src="images/TELEAZE-logo.png" alt="footer-logo">
+                    </div>	
+                </div>	
+
+
+                <!-- FOOTER LINKS -->
+                <div class="col-sm-4 col-md-3 col-xl-2">
+                    <div class="footer-links fl-1">
+                    
+                        <!-- Title -->
+                        <h6 class="s-17 w-700">Company</h6>
+
+                        <!-- Links -->
+                        <ul class="foo-links clearfix">
+                            <li><p><a href="about.html">About Us</a></p></li>
+                            <li><p><a href="careers.html">Careers</a></p></li>	
+                            <li><p><a href="blog-listing.html">Our Blog</a></p></li>							
+                            <li><p><a href="contacts.html">Contact Us</a></p></li>			
+                        </ul>
+
+                    </div>
+                </div>	<!-- END FOOTER LINKS -->	
+
+
+                <!-- FOOTER LINKS -->
+                <div class="col-sm-4 col-md-3 col-xl-2">
+                    <div class="footer-links fl-2">
+                                        
+                        <!-- Title -->
+                        <h6 class="s-17 w-700">Product</h6>
+
+                        <!-- Links -->
+                        <ul class="foo-links clearfix">
+                            <li><p><a href="features.html">Integration</a></p></li>
+                            <li><p><a href="reviews.html">Customers</a></p></li>	
+                            <li><p><a href="pricing-1.html">Pricing</a></p></li>	
+                            <li><p><a href="help-center.html">Help Center</a></p></li>			
+                        </ul>
+
+                    </div>	
+                </div>	<!-- END FOOTER LINKS -->	
+
+
+                <!-- FOOTER LINKS -->
+                <div class="col-sm-4 col-md-3 col-xl-2">
+                    <div class="footer-links fl-3">
+                                        
+                        <!-- Title -->
+                        <h6 class="s-17 w-700">Legal</h6>
+
+                        <!-- Links -->
+                        <ul class="foo-links clearfix">
+                            <li><p><a href="terms.html">Terms of Use</a></p></li>										
+                            <li><p><a href="privacy.html">Privacy Policy</a></p></li>
+                            <li><p><a href="cookies.html">Cookie Policy</a></p></li>
+                            <li><p><a href="#">Site Map</a></p></li>
+                        </ul>
+
+                    </div>	
+                </div>	<!-- END FOOTER LINKS -->	
+
+
+                <!-- FOOTER LINKS -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="footer-links fl-4">
+                                        
+                        <!-- Title -->
+                        <h6 class="s-17 w-700">Connect With Us</h6>
+
+                        <!-- Mail Link -->
+                        <p class="footer-mail-link ico-25">
+                            <a href="mailto:yourdomain@mail.com">teleaze@gmail.com</a>
+                        </p>
+
+                        <!-- Social Links -->	
+                        <ul class="footer-socials ico-25 text-center clearfix">		
+                            <li><a href="#"><span class="flaticon-facebook"></span></a></li>
+                            <li><a href="#"><span class="flaticon-twitter"></span></a></li>
+                            <li><a href="#"><span class="flaticon-github"></span></a></li>
+                            <li><a href="#"><span class="flaticon-dribbble"></span></a></li>
+                        </ul>
+
+                    </div>	
+                </div>	<!-- END FOOTER LINKS -->	
+
+
+            </div>	<!-- END FOOTER CONTENT -->
+
+
+            <hr>	<!-- FOOTER DIVIDER LINE -->
+
+
+            <!-- BOTTOM FOOTER -->
+            <div class="bottom-footer">
+                <div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
+
+
+                    <!-- FOOTER COPYRIGHT -->
+                    <div class="col">
+                        <div class="footer-copyright"><p class="p-sm">&copy; 2024 Teleaze. <span>All Rights Reserved</span></p></div>
+                    </div>
+
+
+                    <!-- FOOTER SECONDARY LINK -->
+                    <div class="col">
+                        <div class="bottom-secondary-link ico-15 text-end">
+                            <p class="p-sm"><a href="demo-11.html">Made with 
+                                <span class="flaticon-heart"></span> by Teleaze</a>
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>  <!-- End row -->
+            </div>	<!-- END BOTTOM FOOTER -->
+
+
+        </div>     <!-- End container -->	
+    </footer>   <!-- END FOOTER-3 -->	
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.easing.js"></script>
+		<script src="js/jquery.appear.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/pricing-toggle.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/request-form.js"></script>	
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/jquery.ajaxchimp.min.js"></script>	
+		<script src="js/popper.min.js"></script>
+		<script src="js/lunar.js"></script>
+		<script src="js/wow.js"></script>
+				
+		<!-- Custom Script -->		
+		<script src="js/custom.js"></script>
+</body>
+</html>
